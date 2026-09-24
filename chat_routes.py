@@ -12,9 +12,9 @@ from schemas.schemas import (
     ChatCompletionRequest, ChatCompletionResponse, RoutingInfo, FeedbackRequest,
 )
 from auth.dependencies import get_current_api_key, get_project_for_key
-from app.routing.router_engine import select_model, fallback_order, NoEligibleModelError, eligible_models
-from app.providers.executor import execute_with_fallback, ProviderExecutionError
-from app.core.limits import check_rate_limit, check_budget, RateLimitExceeded, BudgetExceeded
+from router_engine import select_model, fallback_order, NoEligibleModelError, eligible_models
+from executor import execute_with_fallback, ProviderExecutionError
+from limits import check_rate_limit, check_budget, RateLimitExceeded, BudgetExceeded
 
 router = APIRouter(prefix="/v1", tags=["chat"])
 

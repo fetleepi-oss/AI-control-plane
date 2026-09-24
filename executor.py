@@ -3,8 +3,8 @@ import time
 
 import litellm
 
-from app.models.models import ModelEntry
-from app.config import settings
+from models.models import ModelEntry
+from config import settings
 
 
 class ProviderExecutionError(Exception):

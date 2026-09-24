@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from types import SimpleNamespace
 
 from app.routing.router_engine import select_model, eligible_models, NoEligibleModelError
-from app.models.models import RoutingMode
+from models.models import RoutingMode
 
 
 def make_model(id_, quality, cost_in, cost_out, latency, reliability, privacy="public"):

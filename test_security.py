@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from app.auth.security import (
+from auth.security import (
     hash_password, verify_password, create_access_token, decode_access_token,
     generate_api_key, hash_api_key,
 )

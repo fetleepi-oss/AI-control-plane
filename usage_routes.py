@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from app.database import get_db
-from app.models.models import RequestLog, Project
-from app.auth.dependencies import get_project_for_key
+from database import get_db
+from models.models import RequestLog, Project
+from auth.dependencies import get_project_for_key
 
 router = APIRouter(prefix="/v1", tags=["usage"])
 

@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 
 from sqlalchemy.orm import Session
 
-from app.models.models import ModelEntry, RoutingPolicy, RoutingMode
+from models.models import ModelEntry, RoutingPolicy, RoutingMode
 
 
 @dataclass

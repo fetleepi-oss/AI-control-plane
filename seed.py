@@ -4,7 +4,7 @@ Seeds the platform-wide provider/model registry.
 Run with:  python -m app.seed
 """
 from database import SessionLocal, engine, Base
-from models.models import ProviderConfig, ModelEntry
+from models import ProviderConfig, ModelEntry
 
 
 def seed():

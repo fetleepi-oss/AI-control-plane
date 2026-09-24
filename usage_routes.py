@@ -3,8 +3,8 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from database import get_db
-from models.models import RequestLog, Project
-from auth.dependencies import get_project_for_key
+from models import RequestLog, Project
+from dependencies import get_project_for_key
 
 router = APIRouter(prefix="/v1", tags=["usage"])
 

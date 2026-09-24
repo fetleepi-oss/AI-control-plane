@@ -4,14 +4,14 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from database import get_db
-from models.models import (
+from models import (
     ModelEntry, ProviderConfig, RoutingPolicy, RoutingMode, ApiKey, Project,
     RequestLog, RequestStatus, Feedback,
 )
-from schemas.schemas import (
+from schemas import (
     ChatCompletionRequest, ChatCompletionResponse, RoutingInfo, FeedbackRequest,
 )
-from auth.dependencies import get_current_api_key, get_project_for_key
+from dependencies import get_current_api_key, get_project_for_key
 from router_engine import select_model, fallback_order, NoEligibleModelError, eligible_models
 from executor import execute_with_fallback, ProviderExecutionError
 from limits import check_rate_limit, check_budget, RateLimitExceeded, BudgetExceeded

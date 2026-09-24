@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from database import get_db
-from models.models import Project, Membership, ApiKey, RoutingPolicy, User
-from schemas.schemas import ProjectCreate, ProjectOut, ApiKeyCreate, ApiKeyCreated, ApiKeyOut
-from auth.dependencies import get_current_user
-from auth.security import generate_api_key
+from models import Project, Membership, ApiKey, RoutingPolicy, User
+from schemas import ProjectCreate, ProjectOut, ApiKeyCreate, ApiKeyCreated, ApiKeyOut
+from dependencies import get_current_user
+from security import generate_api_key
 
 router = APIRouter(prefix="/v1", tags=["projects"])
 

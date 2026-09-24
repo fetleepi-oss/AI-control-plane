@@ -3,7 +3,7 @@ import time
 
 import litellm
 
-from models.models import ModelEntry
+from models import ModelEntry
 from config import settings
 
 

@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 
 from config import settings
-from models.models import ApiKey, Budget, RequestLog
+from models import ApiKey, Budget, RequestLog
 
 _redis = redis.from_url(settings.redis_url, decode_responses=True)
 

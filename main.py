@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.database import Base, engine
-from app.api import auth_routes, project_routes, chat_routes, usage_routes
+from database import Base, engine
+import auth_routes, project_routes, chat_routes, usage_routes
 
 app = FastAPI(
     title="AI Control Plane",
